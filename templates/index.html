@@ -1,0 +1,33 @@
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center">Vignesh Py</a>
+      <ul class="left hide-on-med-and-down">
+        <li><a href="">Home</a></li>
+        {%for cat in list %}
+        <li><a href="">{{cat.category}}</a></li>
+        {% endfor %}
+      
+        <li class="active"><a href="">Latest Feeds</a></li>
+      </ul>
+      <div class="progress">
+        <div class="indeterminate"></div>
+    </div>
+          
+    </div>
+    
+  </nav>
+
+
+
+  <script>
+  $(document).ready(function()
+  {
+      $('.progress').hide()
+  })
+  
+  </script>
