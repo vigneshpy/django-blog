@@ -6,14 +6,15 @@ from admin_app.models import AddCategory
 
 
 def index(request):
-
-    cat=AddCategory.objects.all()[:5]
-    print(cat)
  
-    return render(request,'home.html',{'list':cat})
+    return render(request,'index.html')
 
 
-def  category(request,cat):
-    cat1=AddCategory.objects.all()
-    print(cat)
-    return render(request,'category.html',{'categoryname':cat,'list':cat1})
+def  post(request):
+   
+   return render(request,'post.html')
+
+def  blog(request):
+   
+   return render(request,'blog.html')
+
