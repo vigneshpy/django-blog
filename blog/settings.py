@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home','account','admin_app', 'ckeditor' 
+    'home','account','ckeditor' ,'slugify'
 ]
+
+
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

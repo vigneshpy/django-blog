@@ -1,20 +1,27 @@
 from django.shortcuts import render
 
 
-from admin_app.models import AddCategory
+
+from django.http import HttpResponse
 # Create your views here.
 
 
-def index(request):
- 
-    return render(request,'index.html')
+from .models import AddPost
 
 
-def  post(request):
-   
-   return render(request,'post.html')
+def home(request):
+	post=AddPost.objects.all().order_by('-id')[:3]
+	return render(request,'index.html',{'list':post})
 
-def  blog(request):
-   
-   return render(request,'blog.html')
+def post(request):
+
+
+
+	return HttpResponse('Post')
+def detail(request,id):
+	post=AddPost.objects.get(id=id)
+
+	print(post)
+
+	return render(request,'post.html',{'list':post})
 

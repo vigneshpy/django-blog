@@ -6,7 +6,6 @@
 
 
    {%block content%}
-
   
    
     <section style="background: url( {% static 'img/hero.jpg'%}); background-size: cover; background-position: center center" class="hero">
@@ -114,41 +113,21 @@
           <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </header>
         <div class="row">
+
+          {%for i in list%}
           <div class="post col-md-4">
-            <div class="post-thumbnail"><a href="post.html"><img src="{% static 'img/blog-1.jpg'%}" alt="..." class="img-fluid"></a></div>
+            <div class="post-thumbnail"><a href="view/post/{{i.id}}"><img src="{% static 'img/blog-1.jpg'%}" alt="..." class="img-fluid"></a></div>
             <div class="post-details">
               <div class="post-meta d-flex justify-content-between">
-                <div class="date">20 May | 2016</div>
-                <div class="category"><a href="#">Business</a></div>
-              </div><a href="post.html">
-                <h3 class="h4">Ways to remember your important ideas</h3></a>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <div class="date">{{i.created_date}}</div>
+                <div class="category"><a href="#">{{i.category}}</a></div>
+              </div><a href="view/post/{{i.id}}">
+                <h3 class="h4">{{i.title}}</h3></a>
+              <p class="text-muted">{{i.body}}</p>
             </div>
           </div>
-          <div class="post col-md-4">
-            <div class="post-thumbnail"><a href="post.html"><img src="{% static 'img/blog-2.jpg'%}" alt="..." class="img-fluid"></a></div>
-            <div class="post-details">
-              <div class="post-meta d-flex justify-content-between">
-                <div class="date">20 May | 2016</div>
-                <div class="category"><a href="#">Technology</a></div>
-              </div><a href="post.html">
-                <h3 class="h4">Diversity in Engineering: Effect on Questions</h3></a>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-          </div>
-          <div class="post col-md-4">
-            <div class="post-thumbnail"><a href="post.html"><img src="{% static 'img/blog-3.jpg'%}" alt="..." class="img-fluid"></a></div>
-            <div class="post-details">
-              <div class="post-meta d-flex justify-content-between">
-                <div class="date">20 May | 2016</div>
-                <div class="category"><a href="#">Financial</a></div>
-              </div><a href="post.html">
-                <h3 class="h4">Alberto Savoia Can Teach You About Interior</h3></a>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        {%endfor%}
+      
     </section>
     <!-- Newsletter Section-->
     <section class="newsletter no-padding-top">    
@@ -246,4 +225,5 @@
           </div>
         </div>
       </div>
+}
 {%endblock%}
