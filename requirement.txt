@@ -1,6 +1,8 @@
 Django==2.2.1
 django-ckeditor==5.7.1
 django-js-asset==1.2.2
+django-quilljs==0.0.2
 psycopg2==2.8.2
 pytz==2019.1
+slugify==0.0.1
 sqlparse==0.3.0

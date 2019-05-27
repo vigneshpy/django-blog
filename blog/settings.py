@@ -37,11 +37,30 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home','account','ckeditor' ,'slugify'
+    'home','account','ckeditor' ,'slugify','ckeditor_uploader',
 ]
 
 
-CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+# CKEDITOR_BASEPATH = "/static/ckeditor"
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+
+# CKEDITOR_CONFIGS = {
+
+# 'default':{
+#     'basic': {
+#         'toolbar': 'Basic',
+#         'skin': 'office2013',
+#         'height' : '120px',
+#         'contentsCss' : 'body {overflow:hidden;}',
+#         'extraPlugins' : 'autogrow',
+#     #    'extraPlugins' : 'autosave',
+#     },
+#     },
+
+
+#     }
 
 
 MIDDLEWARE = [

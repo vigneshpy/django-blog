@@ -4,6 +4,7 @@ from django.db import models
 from django.db import models
 from django.utils.text import slugify
 # Create your models here.
+from ckeditor.fields import RichTextField
 
 class AddCategory(models.Model):
     category=models.CharField(max_length=40)
@@ -16,7 +17,7 @@ class AddCategory(models.Model):
 class AddPost(models.Model):
     category = models.ForeignKey(AddCategory, verbose_name="Category",on_delete=models.CASCADE)
     title=models.CharField(max_length=130)
-    body=models.TextField()
+    body=RichTextField()
     posted_by=models.CharField(max_length=120,default='sss')
     slug=models.TextField()
     active=models.BooleanField(default=True)
