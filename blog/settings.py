@@ -46,6 +46,44 @@ INSTALLED_APPS = [
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 1000,
+    },
+
+    'custom': {
+        'skin': 'office2013',
+        'height' : '120px',
+        'contentsCss' : 'body {overflow:hidden;}',
+        'extraPlugins' : 'autogrow','imageuploader'
+     #   'extraPlugins' : 'autosave',
+        'toolbar':
+            [
+                [ 'Source','-','Save','NewPage','DocProps','Preview','Print','-','Templates' ],
+                [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] ,
+                [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ] ,
+                [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'imageuploader', 
+                'HiddenField' ] ,
+                '/',
+                [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] ,
+                [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv',
+                '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl' ] ,
+                [ 'Link','Unlink','Anchor' ] ,
+                [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe' ],
+                '/',
+                [ 'Styles','Format','Font','FontSize' ],
+                [ 'TextColor','BGColor' ],
+                [ 'Maximize', 'ShowBlocks','-','About' ],
+            ],
+
+
+    },
+}
+
+
+
 # CKEDITOR_CONFIGS = {
 
 # 'default':{
